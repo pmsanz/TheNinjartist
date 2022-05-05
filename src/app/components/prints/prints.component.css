@@ -1,0 +1,56 @@
+/*ALL*/
+
+@font-face {
+    font-family: 'NinjaFont';
+    src: url('/assets/fonts/ntailu.ttf') format('truetype');
+}
+
+/*Mobile*/
+
+@media (max-width: 499px) {
+    .top-message {
+        margin-top: 45%;
+        color: black;
+    }
+    .mb-1 {
+        font-family: "NinjaFont" !important;
+        color: #000000 !important;
+        text-shadow: 0px 0px 1px #6f675e;
+        font-size: 15px;
+        font-weight: normal;
+        margin-left: 20%;
+    }
+}
+
+/* DESKTOP */
+
+@media (min-width: 500px) and (max-width: 1399px) {
+    .top-message {
+        margin-top: 45%;
+        color: black;
+    }
+    .mb-1 {
+        font-family: "NinjaFont" !important;
+        color: #000000 !important;
+        text-shadow: 0px 0px 1px #6f675e;
+        font-size: 30px;
+        font-weight: normal;
+        margin-left: 5%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .top-message {
+        margin-top: 65%;
+        margin-bottom: 15% !important;
+        color: black;
+    }
+    .mb-1 {
+        font-family: "NinjaFont" !important;
+        color: #000000 !important;
+        text-shadow: 0px 0px 1px #6f675e;
+        font-size: 30px;
+        font-weight: normal;
+        margin-left: -12%;
+    }
+}

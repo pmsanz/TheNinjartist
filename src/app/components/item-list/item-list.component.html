@@ -1,0 +1,33 @@
+
+<app-header></app-header>
+<app-validating-circle></app-validating-circle>
+<div class="container">
+
+  <div class="row">
+    <div class="col">
+
+      <app-modal *ngIf="itemExist" [item]="itemSelected"></app-modal>
+
+    </div>
+  </div>
+
+
+  <div class="row" *ngFor="let item of items; let i = index;first as isFirst;">
+
+    <app-list-item-x3 [class.top-deck]="isFirst == true" *ngIf="(i % 4 == 0) && (value >= i + 4)"
+      [itemMostrar]='items.slice(i,i+4)' (mostrarModalEvent)="mostrarModal($event)">
+    </app-list-item-x3>
+
+  </div>
+
+  <div class="row justify-content-center btnLoad">
+    <div class="offset-md-5 col">
+
+      <button type="button" class="btn btn-secondary btn-sm btn-load" (click)="mostrarItem()">Load More...</button>
+
+    </div>
+  </div>
+
+</div>
+
+<app-footer></app-footer>

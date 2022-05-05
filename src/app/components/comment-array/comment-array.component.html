@@ -1,0 +1,9 @@
+<div class="comment-margin" *ngFor="let comment of comments;let i = index;first as isFirst;">
+
+    
+    <app-comment [commentMessage]="comment" (commentRepplied)="commentReplied($event)" ></app-comment>
+    <hr>
+    <!-- <button (click)="mostrarModal()">Click!</button> -->
+   
+
+</div>

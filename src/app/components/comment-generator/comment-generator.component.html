@@ -1,0 +1,76 @@
+<div class="row">
+    <div class="offset-1 col-md-5">
+        <div class="comment-generator-general card-border">
+            <div class="row margin-top margin-left padding-top">
+                <div class="col-md-2">
+                    <label for="name" class="mb-1">Feed's Name:</label>
+                </div>
+                <div class="col ">
+                    <!-- <input id="name" name="name" type="text" placeholder="Anonymous" #inputUserName="ngModel" [(ngModel)]="commentToGenerate.userName"> -->
+                    <p class="mb-2">{{this.feed.titulo}}</p>
+                    <!-- <input id="btnReport" class="margin-left" name="btnReport" type="button" value="Report"> -->
+                </div>
+            </div>
+
+            <div class="row margin-top margin-left">
+                <div class="col-md-2">
+                    <label for="name" class="mb-1" >Name:</label>
+                </div>
+                <div class="col ">
+                    <input id="name" name="name" type="text" placeholder="Anonymous" #inputUserName="ngModel"
+                        [(ngModel)]="commentToGenerate.userName">
+
+                    <!-- <input id="btnReport" class="margin-left" name="btnReport" type="button" value="Report"> -->
+                </div>
+            </div>
+
+            <div class="row margin-left">
+                <div class="col-md-2">
+                    <label for="Reply" class="mb-1">Reply:</label>
+                </div>
+                <div class="col">
+                    <input id="Reply" name="Reply" type="checkbox" [checked]="Reply.checked"
+                        [attr.disabled]="Reply.checked == false ? '' : null" (click)="checkboxClick()">
+                    <label *ngIf="Reply.checked" for="Reply" id="usrReply"
+                        class="margin-left">{{Reply.commentID}}</label>
+                </div>
+            </div>
+
+            <div class="row margin-left">
+                <div class="col-md-2">
+                    <label for="comment_body" class="mb-1">Comment:</label>
+                </div>
+                <div class="col-md-2">
+                    <textarea #inputComment="ngModel" [(ngModel)]="commentToGenerate.comment" id="comment_body"
+                        name="comment_body" rows="4" cols="40"></textarea>
+                </div>
+            </div>
+
+            <div class="row margin-left">
+                <div class="col-md-2">
+                    <label for="captcha" class="mb-1">Captcha:</label>
+                </div>
+                <div class="col">
+                    <input id="captcha" name="captcha" type="checkbox" (click)="clickCheckboxRobot()">
+                    <label class="margin-left" for="captcha">I'm not a Robot</label>
+                </div>
+            </div>
+
+            <div class="row margin-left">
+                <div class="offset-md-2 col margin-bottom">
+                    <div class="row">
+
+                        <div class="col">
+                            <input id="btnOk" name="btnOk" type="button" value="Send" (click)="crearComentario()">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>

@@ -1,0 +1,31 @@
+<li class="media">
+    <div class="media-body">
+        <div class="row">
+            <div class="col-md-2">
+                <img class="mr-3 img-media rounded imagePreviewClass" src="{{this.url + item.imagePreview}}">
+            </div>
+            <div class="col-md-6 content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5 class="mt-0 mb-1">{{item.titulo | titlecase}}</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="download-contenido">{{item.contenido.substring(0,200)}}...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <button type="button" (click)="downloadItem()" class="btn btn-secondary btn-sm">Download</button>
+            </div>
+            <div class="col-md-6">
+                
+            </div>
+        </div>
+    </div>
+
+</li>

@@ -1,0 +1,53 @@
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col">
+
+
+      <h1>Image Updater</h1>
+      <table class="table table-wrapper table-dark ">
+        <thead class="thead-dark">
+          <tr>
+            <th class="td-titulo" scope="col">Titulo</th>
+            <th class="td-contenido" scope="col">Contenido</th>
+            <th class="td-type" scope="col">Type</th>
+            <th class="td-price" scope="col">Price</th>
+            <th class="td-action" scope="col">Action</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col">
+      <table class="table table-wrapper table-dark ">
+        <tbody class="table-wrapper-scroll-y">
+          <tr *ngFor="let item of itemList;let i = index;" class="row">
+
+            <td class="col-sm-4 td-titulo">{{item.titulo}}</td>
+            <td class="col-sm-4 td-contenido">{{item.contenido.substring(0,150)}}</td>
+            <td class="col-md-1 td-type">{{item.type}}</td>
+            <td *ngIf="item.type == 'Store'" class="col-md-1 td-price">${{this.formatPriceDivision(item.price)}}</td>
+            <td *ngIf="item.type != 'Store'" class="col-md-1 td-price">-</td>
+            <td class="col-md-2 td-action">
+
+              <button (click)="modifyItem(item)" name="btnImportMessage" class="btn-modify" data-toggle="tooltip"
+                title="Modify">
+                <span class="oi oi-pencil"></span>
+              </button>
+              <button (click)="deleteItem(item.id, item.titulo)" name="btnImportMessage" class="btn-delete"
+                data-toggle="tooltip" title="Delete">
+                <span class="oi oi-delete"></span>
+              </button>
+
+
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>

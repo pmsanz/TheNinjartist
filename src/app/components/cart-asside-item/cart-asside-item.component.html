@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-md-4 align-self-center">
+
+        <div class="containerImage">
+            <span [ngClass]="this.b_needMoreSpace ? 'oi oi-bookmark bookmarkBig' : 'oi oi-bookmark'"></span>
+            <p [ngClass]="this.b_needMoreSpace ? 'priceBig' : 'price'">${{this.formatPriceDivision(itemMostrar.price)}}
+            </p>
+            <img src="{{this.url + this.itemMostrar.imagePreview}}" alt="Avatar" class="image">
+            <div class="overlay">
+                <a class="icon" title="User Profile">
+                    <span class="oi oi-x x-close"></span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-8">
+        <div class="row">
+            <div class="col title-cart-item">
+
+                {{this.itemMostrar.titulo | titlecase }}
+
+            </div>
+        </div>
+    </div>
+
+</div>

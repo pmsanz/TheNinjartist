@@ -1,0 +1,36 @@
+{
+  "name": "backend-ninjartist",
+  "version": "1.0.0",
+  "description": "Api backend ninjartist",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmsanz/Ninjartist.git"
+  },
+  "author": "Pablo Sanz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pmsanz/Ninjartist/issues"
+  },
+  "homepage": "https://github.com/pmsanz/Ninjartist#readme",
+  "dependencies": {
+    "@paypal/checkout-server-sdk": "^1.0.2",
+    "body-parser": "^1.19.0",
+    "busboy": "^0.3.1",
+    "connect-multiparty": "^2.2.0",
+    "csv-parser": "^2.3.3",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.20",
+    "nodemailer": "^6.4.10",
+    "properties-reader": "^2.0.0",
+    "validator": "^13.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

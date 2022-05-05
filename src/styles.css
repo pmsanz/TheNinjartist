@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+
+.afu-attach-pin {
+    background: white !important;
+    margin-right: 0%;
+}
+
+.body-fullCLass {
+    background-color: #e5e5e7!important;
+}
+
+li, p {
+    color: #a0a0a0;
+}
+
+h1, h2, h5, label {
+    color:black;
+}
+
+hr {
+    border-color: #a0a0a0;
+}
+
+@font-face {
+    font-family: 'NinjaFont';
+    src: url('/assets/fonts/ntailu.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NinjaFont_bold';
+    src: url('/assets/fonts/ntailub.ttf') format('truetype');
+}
+
+/* .card-deck:nth-child(1) {
+    border: 5px solid lime !important;
+    z-index: 1500 !important;
+} */
+
+/* body app-root app-home app-item-list div div app-list-item-x3 div .card-deck:first-child {  
+    border: 5px solid lime !important;
+    z-index: 1500 !important; 
+} */
+
+/* body>article:first-child */
+
+/* body>p~p {
+    background-color: red !important;
+} */

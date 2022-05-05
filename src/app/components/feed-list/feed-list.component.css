@@ -1,0 +1,33 @@
+
+
+@media (max-width: 499px) {
+    .top-deck{
+
+        margin-top: 35%;
+    
+    }
+    .btnLoadMore{
+        margin-left: 5%;
+    }
+
+}
+@media (min-width: 500px) and (max-width: 1399px) {
+
+    .top-deck{
+
+        margin-top: 45%;
+    
+    }
+
+    
+}
+
+@media (min-width: 1400px) {
+
+    .top-deck{
+
+        margin-top: 60%;
+    
+    }
+
+}

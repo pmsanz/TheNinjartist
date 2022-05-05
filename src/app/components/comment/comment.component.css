@@ -1,0 +1,202 @@
+.spanClickeable:hover {
+    cursor: pointer;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content div {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content div:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+@media (max-width: 499px) {
+    .lbl_chk {
+        /* padding-left: 0; */
+    }
+    .comment-tittle {
+        /* font-family: "Arial Verdana"; */
+        font-style: normal;
+        color: #000000;
+        padding-left: 5%;
+        font-style: italic;
+        font-weight: 500;
+        /* font-size: 250%; */
+        /* position: absolute;
+        margin-top: 32%;
+        margin-left: 14%; */
+    }
+    .comment-tittle-Reply {
+        font-style: normal;
+        color: #a0a0a0 !important;
+    }
+    .comment-id {}
+    .comment-comment {
+        padding-left: 1%;
+        margin-top: -35px;
+        color: #000000;
+    }
+    .row-Reply {
+        margin-left: 10%;
+    }
+    .margin-left {
+        margin-left: 1%;
+    }
+    #chkComment {
+        padding-left: 1%;
+    }
+    .ReplyID {
+        cursor: pointer;
+        color: #0a0099;
+        text-decoration: underline;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        position: absolute;
+        left: 150px;
+        top: -100px;
+    }
+    .pReplies {
+        margin-left: 80%;
+    }
+    #btnMenu {
+        font-size: 20px;
+        position: absolute;
+        left: 162px;
+        top: -120px;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 1399px) {
+    .lbl_chk {
+        padding-left: 5%;
+    }
+    .comment-tittle {
+        /* font-family: "Arial Verdana"; */
+        font-style: normal;
+        color: #000000;
+        padding-left: 5%;
+        font-style: italic;
+        font-weight: 500;
+        /* font-size: 250%; */
+        /* position: absolute;
+        margin-top: 32%;
+        margin-left: 14%; */
+    }
+    .comment-tittle-Reply {
+        font-style: normal;
+        color: #a0a0a0 !important;
+    }
+    .comment-id {}
+    .comment-comment {
+        padding-left: 1%;
+        color: #000000;
+    }
+    .row-Reply {
+        margin-left: 10%;
+    }
+    .margin-left {
+        margin-left: 1%;
+    }
+    #chkComment {
+        padding-left: 1%;
+    }
+    .ReplyID {
+        cursor: pointer;
+        color: #0a0099;
+        text-decoration: underline;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    #btnMenu {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .lbl_chk {
+        padding-left: 5%;
+    }
+    .comment-tittle {
+        /* font-family: "Arial Verdana"; */
+        font-style: normal;
+        color: #000000;
+        padding-left: 5%;
+        font-style: italic;
+        font-weight: 500;
+        /* font-size: 250%; */
+        /* position: absolute;
+        margin-top: 32%;
+        margin-left: 14%; */
+    }
+    .comment-tittle-Reply {
+        font-style: normal;
+        color: #a0a0a0 !important;
+    }
+    .comment-id {}
+    .comment-comment {
+        padding-left: 1%;
+        color: #000000;
+    }
+    .row-Reply {
+        margin-left: 10%;
+    }
+    .margin-left {
+        margin-left: 1%;
+    }
+    #chkComment {
+        padding-left: 1%;
+    }
+    .ReplyID {
+        cursor: pointer;
+        color: #0a0099;
+        text-decoration: underline;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    #btnMenu {
+        font-size: 20px;
+    }
+}

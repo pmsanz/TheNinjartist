@@ -1,0 +1,173 @@
+<div class="container">
+
+    <div *ngIf="isModifying; else elseBlock">
+        <h2>Modifying item: {{this.itemInput.titulo}}</h2>
+    </div>
+    <ng-template #elseBlock>
+        <h2>Add new item</h2>
+    </ng-template>
+
+    <form #createForm="ngForm" (ngSubmit)="onSubmit(createForm)">
+        <div class="row">
+            <div class="col-md-2">
+                <label for="titulo">Title: </label>
+            </div>
+            <div class="col-md-10">
+                <input #inputTitulo="ngModel" [(ngModel)]="itemEditing.item.titulo" type="text" name="titulo"
+                    class="title" required>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 offset-2">
+                <small *ngIf="!inputTitulo.valid && inputTitulo.touched" class="errorMessage"> You must enter a
+                    Title</small>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label for="textAreaDescription">Description:</label>
+            </div>
+            <div class="col-md-10">
+                <textarea #inputDescripcion="ngModel" [(ngModel)]="itemEditing.item.contenido"
+                    name="textAreaDescription" class="input-text-area" required></textarea>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 offset-2">
+                <small *ngIf="!inputDescripcion.valid && inputDescripcion.touched" class="errorMessage"> You must enter
+                    a Description</small>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <label for="feed">Type of image: </label>
+            </div>
+            <div class="col-md-3">
+
+                <select name="typeSelector" id="typeSelector" (change)="onChangeType($event.target.value)">
+
+                    <option [selected]="type == this.itemEditing.item.type "
+                        *ngFor="let type of sTypeList;let i = index;" value="{{type}}">{{type}}</option>
+
+                </select>
+
+            </div>
+        </div>
+        
+        <div [ngClass]="this.itemEditing.item.type == 'Store' ? 'row' : 'hidden'">
+            <div class="col-md-2">
+                <label for="titulo">Price: </label>
+            </div>
+            <div class="col-md-2">
+                <input #inputPrice="ngModel" [(ngModel)]="this.itemEditing.item.price" type="number" name="price"
+                    class="title" [required] = "this.itemEditing.item.type == 'Store'">
+            </div>
+        </div>
+
+
+
+        <div [ngClass]="this.itemEditing.item.type == 'Store' ? 'row' : 'hidden'">
+            <div class="col-md-4 offset-2">
+                <small *ngIf="!inputPrice.valid && inputPrice.touched" class="errorMessage">
+                    Enter a valid price > $-1</small>
+            </div>
+        </div>
+        
+
+        <div class="row box-attach">
+
+            <div class="col-md-2 align-self-center">
+                <label for="previewImage">Image preview:</label>
+            </div>
+            <div class="col-md-4 align-self-center">
+                <input [disabled]="isLoading ? true : false" type="file" id="previewImage" name="previewImage"
+                    #inputPreviewImage="ngModel" [(ngModel)]="inputPreviewImageString"
+                    (change)="handleSingleFileInput($event.target.files)" required>
+            </div>
+            <div class="col-md-4">
+                <small class="errorMessage" *ngIf="inputPreviewImage.invalid"> You must enter a preview Image</small>
+            </div>
+        </div>
+
+
+        <!-- *ngIf="showUploadbtn"  -->
+
+        <div [ngClass]="this.itemEditing.item.type == 'Store' ? 'row box-attach' : 'hidden'">
+
+            <div class="col-md-2 align-self-center">
+                <label for="previewImage">Full images:</label>
+            </div>
+            <div class="col-md-4 align-self-center">
+                <input [disabled]="isLoading ? true : false" type="file" id="inputMultiImage" name="inputMultiImage"
+                    multiple #inputMultiImage="ngModel" [(ngModel)]="inputFullImageString"
+                    (change)="handleMultipleFileInput($event.target.files)" [required] = "this.itemEditing.item.type == 'Store'">
+            </div>
+            <div class="col-md-4">
+                <small class="errorMessage" *ngIf="inputMultiImage.invalid"> You must enter a full Image</small>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-6">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" [ngStyle]="{'width': uploadedPercentage}"
+                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col" *ngIf="showBtns">
+
+                <button type="submit" class="btn-danger btn-update" [disabled]="createForm.invalid" #inputSubmit>
+                    {{this.actionBtn}} </button>
+                <button type="button" class="btn-danger" (click)="limpiar(createForm)"> Clear </button>
+                <small class="errorMessage" *ngIf="createForm.invalid"> You must enter a title ,content and image/s</small>
+            </div>
+        </div>
+
+
+    </form>
+
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                <div class="col">
+                    <p class="title-previewImage">Preview Front Image:</p>
+                </div>
+            </div>
+            <div class="row rowPreview">
+                <div *ngIf="!this.itemEditing.item.imagePreview" class="col">
+                    <img src="{{this.resultSRC}}">
+                </div>
+                <div *ngIf="this.itemEditing.item.imagePreview" class="col-md-4">
+                    <img src="{{this.url + this.itemEditing.item.imagePreview}}" class="fullImagePreview">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div [ngClass]="this.itemEditing.item.type == 'Store' ? 'row' : 'hidden'">
+        <div class="col">
+            <div class="row">
+                <div class="col">
+                    <p class="title-previewImage">Full Images:</p>
+                </div>
+            </div>
+            <div class="row rowPreview">
+                <div *ngIf="this.itemEditing.item.imageFull.length == 0" class="col">
+                    <img src="{{this.resultSRC}}">
+                </div>
+                <div *ngFor="let image of this.itemEditing.item.imageFull" class="col-md-3">
+                    <img src="{{this.url + image}}" class="fullImagePreview">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

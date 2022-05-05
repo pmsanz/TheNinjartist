@@ -1,0 +1,45 @@
+<div class="row up">
+    <div class="col-3">
+        &nbsp;
+    </div>
+</div>
+
+<div class="row h-100">
+    <div class="col-5 mx-auto">
+
+
+        <!-- <div class="row align-items-center">
+            <div class="col">
+                <h1> Content only for people over +18 </h1>
+                <p> The Ninjartist page , is a website of illustrations for adults </p>
+            </div>
+        </div> -->
+
+        <div class="row">
+            <img class="social-link gumroad" src="../assets/images/Age_check.jpg">
+        </div>
+
+        <div class="row">
+            <div class="col offset-1">
+                <input #checkbox="ngModel" name="accept" [(ngModel)]="checkedCheckbox.checked" type="checkbox"
+                    id="idAccept" required>
+                <label id="labelDeclare" for="accept"> I declare I'm over 18 years old </label>
+
+            </div>
+        </div>
+        <div class="row row-btn">
+            <div class="col-sm-2 offset-2">
+                <button type="button" [disabled]="checkbox.invalid" (click)="accept()">Yes</button>
+            </div>
+            <div class="col-sm-2">
+                <button type="button" (click)="cancel()">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row down">
+    <div class="col-3">
+        &nbsp;
+    </div>
+</div>

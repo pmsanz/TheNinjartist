@@ -1,0 +1,52 @@
+<app-header></app-header>
+<app-validating-circle></app-validating-circle>
+<div class="container cont-contact">
+    <h1>Contact US!</h1>
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
+
+
+
+
+        <div class="row">
+            <div class="col-md-2">
+                <label for="userMail">Please enter you Email:</label>
+
+            </div>
+            <div class="col-md-4">
+                <input id="userMail" value="email" name="userMail" title="enter your email, for contact to you"
+                    #inputEmail="ngModel" [(ngModel)]="message.userMail" required minlength="4">
+                <small *ngIf="!inputEmail.valid && inputEmail.touched && !mensajeEnviado" class="errorMessage"> You must
+                    enter a valid mail</small>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label for="userMessage">Please enter you Comment:</label>
+            </div>
+            <div class="col-md-4">
+                <textarea id="textAreaInput1" value="message" name="userMessage" rows="4" cols="50"
+                    title="enter your message" #inputMessage="ngModel" [(ngModel)]="message.userMessage" required
+                    minlength="10"></textarea>
+                <small *ngIf="!inputMessage.valid && inputMessage.touched && !mensajeEnviado" class="errorMessage"> You
+                    must enter a message, minlength 10
+                    characters</small>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-4">
+                <button type="submit" class="btn-danger" [disabled]="contactForm.invalid"> Send!</button>
+                <small *ngIf="labelError" class="errorMessage"> You must enter a valid mail</small>
+            </div>
+        </div>
+
+
+    </form>
+
+</div>
+
+<app-footer></app-footer>

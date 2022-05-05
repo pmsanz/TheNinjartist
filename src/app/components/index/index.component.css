@@ -1,0 +1,17 @@
+.pageIndex{
+
+text-align: center;
+
+}
+
+.pageIndex{
+
+    display: flex;
+    align-items: stretch;
+}
+
+.pageIndexContainer{
+
+    text-align: center;
+
+}

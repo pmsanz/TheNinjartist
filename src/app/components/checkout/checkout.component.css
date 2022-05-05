@@ -1,0 +1,109 @@
+@font-face {
+  font-family: 'NinjaFont';
+  src: url('/assets/fonts/ntailu.ttf') format('truetype');
+}
+
+.errorMessage {}
+
+.checkOutPanel {
+  margin-left: 1%;
+}
+
+.label-Discount {
+  margin-left: 1%;
+  color: #e5e5e7;
+}
+
+/*     popup     */
+
+.spanClickeable:hover {
+  cursor: pointer;
+}
+
+#btnMenu {
+  font-size: 20px;
+}
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content div {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content div:hover {
+  background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.errorPopUp {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 97%;
+  bottom: -70px;
+  font-family: "NinjaFont" !important;
+  color: #db1111 !important;
+  text-shadow: 2px 1px 2px #888888;
+  font-size: 15px;
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+.block {
+  display: block !important;
+
+}
+
+@media (max-width: 499px) {}
+@media (min-width: 500px) and (max-width: 1399px) {
+  .checkOutPanel {
+    margin-left: 3% !important;
+    margin-top: 3%;
+  }
+  .btnConfirm{
+    margin-top:3%;
+  }
+}
+@media (min-width: 1400px) {
+  .checkOutPanel {
+    margin-left: 3% !important;
+    margin-top: 3%;
+  }
+  .btnConfirm{
+    margin-top:3%;
+  }
+}

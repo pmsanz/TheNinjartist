@@ -1,0 +1,26 @@
+
+    
+        <div class="card card-border" (click)="activarModal(itemMostrar.id)">
+           
+                <img class="card-img-top imagePreviewClass" src="{{this.url + itemMostrar.imagePreview}}"
+                    alt="Card image cap">
+           
+            <div class="card-body card-style">
+                <h5 class="card-title">{{itemMostrar.titulo | titlecase }}</h5>
+                <p class="card-text">{{itemMostrar.contenido.substring(0,80)}}...</p>
+                <span [ngClass]="this.b_needMoreSpace ? 'oi oi-bookmark bookmarkBig' : 'oi oi-bookmark'"> </span>
+                <p [ngClass]="this.b_needMoreSpace ? 'priceBig' : 'price'">${{this.formatPriceDivision(itemMostrar.price)}}</p>
+            </div>
+            
+            <!-- <div class="card-footer card-footer">
+                
+                    <div class="row justify-content-start">
+                        <div class="col-2">
+                            <button type="button" class="btn btn-secondary btn-sm"
+                                (click)="activarModal(itemMostrar.id)">Show</button>
+                        </div>
+                    </div>
+              
+
+            </div> -->
+        </div>

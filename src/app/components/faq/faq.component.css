@@ -1,0 +1,38 @@
+
+h2{
+    
+    font-family: "NinjaFont" !important;
+    color: #454952 !important;
+    font-size: 20px;
+    font-weight: 1000;
+    
+}
+p{
+    
+    font-family: "NinjaFont" !important;
+    color: #454954d9 !important;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+@media (max-width: 499px) {
+    .text {
+        padding-top: 40%;
+        padding-top: 40%;
+        width: 80%;
+        margin-right: 20%;
+    }
+    
+}
+
+@media (min-width: 500px) and (max-width: 1399px) {
+    .text {
+        padding-top: 40%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .text {
+        padding-top: 40%;
+    }
+}

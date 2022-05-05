@@ -1,0 +1,99 @@
+<!-- Sidebar -->
+<div [ngClass]="bbarsShow ? 's-layout__sidebar showAsside' : 's-layout__sidebar'">
+   <div class="s-sidebar__trigger" (click)="clickBars()">
+      <span class="oi oi-menu btn-iconic btn-menu" ></span>
+   </div>
+
+   <nav [ngClass]="bbarsShow ? 's-sidebar__nav showAsside' : 's-sidebar__nav'">
+      <ul>
+         <li>
+            <a class="s-sidebar__nav-link" [routerLink]="['/home']" [routerLinkActive]="['active']">
+               <span class="oi oi-home btn-iconic"></span><em>Store</em>
+            </a>
+         </li>
+         <li *ngIf="bisLogin">
+            <a class="s-sidebar__nav-link" (click)="logOut()">
+               <span class="oi oi-person btn-iconic"></span><em>Logout</em>
+            </a>
+         </li>
+         <li class="checkOutLi" (click)="mostrarCart()">
+            <a class="s-sidebar__nav-link">
+               <span class="oi oi-cart cart-icon"></span><em>CheckOut</em> <span
+                  class="badge badge-light number-notification">{{notificationPurchased}}</span>
+            </a>
+         </li>
+
+         <li>
+            <a class="s-sidebar__nav-link" [routerLink]="['/faq']" [routerLinkActive]="['active']">
+               <span class="oi oi-question-mark btn-iconic"></span><em>FAQ</em>
+            </a>
+         </li>
+         <li>
+            <a class="s-sidebar__nav-link" [routerLink]="['/feed']" [routerLinkActive]="['active']">
+               <span class="oi oi-rss btn-iconic"></span><em>Community</em>
+            </a>
+         </li>
+         <li>
+            <a class="s-sidebar__nav-link" [routerLink]="['/prints']" [routerLinkActive]="['active']">
+               <span class="oi oi-print btn-iconic"></span><em>Prints</em>
+            </a>
+         </li>
+         <li>
+            <a class="s-sidebar__nav-link" [routerLink]="['/contact']" [routerLinkActive]="['active']">
+               <span class="oi oi-envelope-closed btn-iconic"></span><em>Contact</em>
+            </a>
+         </li>
+         <!-- <li>
+            <a class="s-sidebar__nav-link" [routerLink]="['/download']" [routerLinkActive]="['active']">
+               <i class="fa fa-camera"></i><em>Download-TEST</em>
+            </a>
+         </li> -->
+
+         <li *ngIf="bisLogin">
+            <a class="s-sidebar__nav-link" [routerLink]="['/imageList']" [routerLinkActive]="['active']">
+               <i class="oi oi-image"></i><em>ImageList-TEST</em>
+            </a>
+         </li>
+
+         <li *ngIf="bisLogin">
+            <a class="s-sidebar__nav-link" [routerLink]="['/import-list']" [routerLinkActive]="['active']">
+               <i class="oi oi-cloud-upload"></i><em>ImportList-TEST</em>
+            </a>
+         </li>
+
+
+      </ul>
+
+   </nav>
+</div>
+
+
+
+
+<!-- Navbar -->
+
+
+<!-- <div class="w3-top">
+   <div class="w3-bar w3-black w3-card">
+     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+     
+     <a [routerLink]="['/download']" [routerLinkActive]="['active']" class="w3-bar-item w3-button w3-padding-large w3-hide-small">DOWNLOAD</a>
+     <a [routerLink]="['/home']" [routerLinkActive]="['active']" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+     <a [routerLink]="['/imageList']" [routerLinkActive]="['active']" class="w3-bar-item w3-button w3-padding-large w3-hide-small">IMAGE LIST</a>
+     <a [routerLink]="['/contact']" [routerLinkActive]="['active']" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+     <a [routerLink]="['/import-list']" [routerLinkActive]="['active']" class="w3-bar-item w3-button w3-padding-large w3-hide-small">IMPORT LIST</a>
+     <a [routerLink]="['/faq']" [routerLinkActive]="['active']" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FAQ</a>
+     
+     <div class="w3-dropdown-hover w3-hide-small">
+       <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+       <div class="w3-dropdown-content w3-bar-block w3-card-4">
+         <a href="#" class="w3-bar-item w3-button">Merchandise</a>
+         <a href="#" class="w3-bar-item w3-button">Extras</a>
+         <a href="#" class="w3-bar-item w3-button">Media</a>
+       </div>
+     </div>
+
+     <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+   </div>
+ </div>
+  -->

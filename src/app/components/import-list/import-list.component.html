@@ -1,0 +1,26 @@
+<div class="container">
+   
+    <div class="container-import-list">
+        <div class="row">
+            <div class="col-sm-3 justify-content-start">
+                <label for="btnImportUserList"> Import User List </label>
+                <angular-file-uploader [config]="afuConfig1" (ApiResponse)="DocUpload($event)">
+                </angular-file-uploader>
+
+
+            </div>
+            <div class="col-sm-3">
+
+                <label for="btnImportMessage"> Import Message </label>
+                <angular-file-uploader [config]="afuConfig2" (ApiResponse)="DocUpload($event)">
+                </angular-file-uploader>
+            </div>
+
+        </div>
+
+        <br>
+        <app-import-list-panel [message]="message"></app-import-list-panel>
+
+    </div>
+
+</div>

@@ -1,1 +1,2 @@
-# TheNinjartist
+# Ninjartist
+Ninjartist Page

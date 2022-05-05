@@ -1,0 +1,38 @@
+<!-- Header -->
+<img class="header" src="../assets/images/header2.jpg">
+
+<a href="http://gumroad.com/ninjartist"><img class="social-link gumroad" src="../assets/images/gumroad_icon.png"></a>
+
+<a href="http://patreon.com/ninjartist"><img class="social-link patreon" src="../assets/images/patreon_icon.png"></a>
+
+<a href="http://twitter.com/theninjartist"><img class="social-link twiter" src="../assets/images/twitter_icon.png"></a>
+
+<img class="ninjaIcon" src="../assets/images/Icon.png">
+
+<img class="text-logo" src="../assets/images/ninjartist.png">
+
+<div class="row-breadcrum">
+
+    <a [routerLink]="['/home']" [routerLinkActive]="['active']">
+        <em class="col-store" [ngClass]="sLink == 'home' ? 'link-header-clicked' : 'link-header'">Store</em>
+    </a>
+
+    <a class="link-header" [routerLink]="['/feed']" [routerLinkActive]="['active']">
+        <em class="col-feed" [ngClass]="sLink == 'feed' ? 'link-header-clicked' : 'link-header'">Community</em>
+    </a>
+
+    <a class="link-header" [routerLink]="['/prints']" [routerLinkActive]="['active']">
+        <em class="col-prints" [ngClass]="sLink == 'prints' ? 'link-header-clicked' : 'link-header'">Prints</em>
+    </a>
+
+    <a class="link-header" [routerLink]="['/contact']" [routerLinkActive]="['active']">
+        <em class="col-contact" [ngClass]="sLink == 'contact' ? 'link-header-clicked' : 'link-header'">Contact</em>
+    </a>
+
+</div>
+
+<p  class="row-title-text" [ngClass]="bIsUpper == true ? 'row-title-text faq' : 'row-title-text'">{{ this.bIsUpper ? (this.sTitle | uppercase ) : (this.sTitle | titlecase)}}</p>
+<!-- <p *ngIf="!this.qFix; else elseBlock" class="row-title-text">{{this.sTitle | titlecase}}</p>
+<ng-template #elseBlock>
+    <p class="row-title-text">{{this.sTitle | uppercase}}</p>
+</ng-template> -->

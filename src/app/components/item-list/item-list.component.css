@@ -1,0 +1,43 @@
+.btnLoad {
+    margin-top: 5%;
+}
+
+.row-items {
+    /* margin-top: -9%; */
+}
+
+
+
+
+@media (max-width: 499px) {
+    .btn-load {
+        margin-left: 25%;
+    }
+    .top-deck {
+        margin-top: 20%;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 1399px) {
+    #top {
+        margin-top: 25%;
+    }
+    .btn-load {
+        margin-left: 4%;
+    }
+    .top-deck {
+        margin-top: 40%;
+    }
+}
+
+@media (min-width: 1400px) {
+    #top {
+        margin-top: 25%;
+    }
+    .btn-load {
+        margin-left: 4%;
+    }
+    .top-deck {
+        margin-top: 60%;
+    }
+}

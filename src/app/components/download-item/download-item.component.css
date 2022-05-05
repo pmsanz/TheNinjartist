@@ -1,0 +1,94 @@
+@media (max-width: 499px) {
+    .imagePreviewClass {
+        /* width: 64px;
+        height: 64px; */
+        width: 248px;
+        height: 200px;
+    }
+    .media {
+        padding-bottom: 2%;
+    }
+    .mb-1 {
+        font-family: "NinjaFont";
+        font-weight: 1000;
+        text-shadow: 0px 1px #aba7a3;
+        color: #686c6f;
+        font-size: 15px;
+        position: absolute !important;
+        bottom: 200px;
+        left: 15px;
+    }
+    .download-contenido {
+        font-family: "NinjaFont";
+        font-weight: 500;
+        color: black;
+        font-size: 15px;
+        width: 248px;
+    }
+    .btn-sm {
+        margin-left: 23%;
+    }
+    .media-body {
+        margin-top: 10%;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 1399px) {
+    .imagePreviewClass {
+        width: 320px;
+        height: 240px;
+    }
+    .media {
+        padding-bottom: 5%;
+    }
+    .content {
+        margin-left: 15%;
+    }
+    .mb-1 {
+        font-family: "NinjaFont";
+        font-weight: 1000;
+        text-shadow: 0px 1px #aba7a3;
+        color: #686c6f;
+        font-size: 15px;
+    }
+    .download-contenido {
+        font-family: "NinjaFont";
+        font-weight: 500;
+        color: black;
+        font-size: 15px;
+    }
+    .btn-sm {
+        margin-left: 80%;
+        margin-top: 10%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .imagePreviewClass {
+        width: 320px;
+        height: 240px;
+    }
+    .media {
+        padding-bottom: 5%;
+    }
+    .content {
+        margin-left: 15%;
+    }
+    .mb-1 {
+        font-family: "NinjaFont";
+        font-weight: 1000;
+        text-shadow: 0px 1px #aba7a3;
+        color: #686c6f;
+        font-size: 15px;
+    }
+    .download-contenido {
+        font-family: "NinjaFont";
+        font-weight: 500;
+        color: black;
+        font-size: 15px;
+    }
+    .btn-sm {
+        margin-left: 80%;
+        margin-top: 10%;
+    }
+}

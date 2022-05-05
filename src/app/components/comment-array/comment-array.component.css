@@ -1,0 +1,39 @@
+
+@media (max-width: 499px) {
+    .comment-replyed{
+
+        color: rgb(179, 179, 179);
+        margin-left:5%;
+    }
+    
+    .comment-margin{
+    
+        margin-top: 5%;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 1399px) {
+    .comment-replyed{
+
+        color: rgb(179, 179, 179);
+        margin-left:5%;
+    }
+    
+    .comment-margin{
+    
+        margin-top: 5%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .comment-replyed{
+
+        color: rgb(179, 179, 179);
+        margin-left:5%;
+    }
+    
+    .comment-margin{
+    
+        margin-top: 5%;
+    }
+}

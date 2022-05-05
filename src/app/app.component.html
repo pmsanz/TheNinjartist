@@ -1,0 +1,4 @@
+<app-asside id="myAsside" (_mostrarCart)="mostrar()"></app-asside>
+<app-cart-asside [bmostrar]="_mostrar" (mostarEmitter)="eventMostrar($event)"></app-cart-asside>
+
+<router-outlet></router-outlet>

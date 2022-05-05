@@ -1,0 +1,106 @@
+<div class="container">
+    <div *ngIf="isModifying; else elseBlock">
+        <h2>Modify Item: {{this.itemInput.titulo}}</h2>
+    </div>
+    <ng-template #elseBlock>
+        <h2>Add New Image</h2>
+    </ng-template>
+
+
+    <form #createForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-md-2">
+                <label for="titulo">Title: </label>
+            </div>
+            <div class="col-md-10">
+                <input #inputTitulo="ngModel" [(ngModel)]="message.titulo" type="text" name="titulo" class="title">
+                <small *ngIf="!inputTitulo.valid && inputTitulo.touched" class="errorMessage"> You must enter a
+                    Title</small>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label for="textAreaDescription">Description:</label>
+            </div>
+            <div class="col-md-10">
+                <textarea #inputDescripcion="ngModel" [(ngModel)]="message.contenido" name="textAreaDescription"
+                    class="input-text-area"></textarea>
+                <small *ngIf="!inputDescripcion.valid && inputDescripcion.touched" class="errorMessage"> You must enter
+                    a Description</small>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label for="titulo">Price: </label>
+            </div>
+            <div class="col-md-2">
+                <input #inputPrice="ngModel" [(ngModel)]="message.price" type="number" name="price" class="title">
+                <small *ngIf="!inputPrice.valid && inputPrice.touched" class="errorMessage">
+                    Enter a valid price</small>
+            </div>
+        </div>
+       
+        <div class="row">
+            <div class="col-md-2">
+                <label for="feed">Feed: </label>
+            </div>
+            <div class="col-md-1">
+                <input #inputFeed="ngModel" [(ngModel)]="message.feed" (click)="checkFeed()" type="checkbox" name="feed" class="checkBoxFeed">
+            </div>
+        </div>
+
+        <!-- *ngIf="showUploadbtn"  -->
+        <div *ngIf="showMultiBtn">
+
+            <div class="row box-attach">
+
+                <div class="col-md-2 align-self-center">
+                    <label for="previewImage">Multi Image:</label>
+                </div>
+                <div class="col-md-2 align-self-center" *ngIf="showUploadbtn">
+                    <angular-file-uploader [config]="this.afuConfigMultiFile" (ApiResponse)="DocUpload($event)">
+                    </angular-file-uploader>
+                </div>
+            </div>
+        </div>
+
+        <!-- *ngIf="showUploadbtn"  -->
+        <div *ngIf="showUploadbtn">
+            <div *ngFor="let c of nComponents; let i = index">
+
+                <div class="row box-attach">
+                    <div class="col-md-2 align-self-center">
+                        <label for="previewImage">Single Image:</label>
+                    </div>
+                    <div class="col-md-2 align-self-center" *ngIf="showUploadbtn">
+                        <angular-file-uploader [config]="actualizarAfu(i)" (ApiResponse)="DocUpload($event)">
+                        </angular-file-uploader>
+                    </div>
+
+                    <div class="col-md-1">
+                        <img class="fullImagePreview" src="{{this.url + nComponents[i]}}">
+                    </div>
+                    <div class="col-md-1 align-self-end">
+
+                        <button class="btnDelete" *ngIf="nComponents[i] != 'empty.jpg'" type="button"
+                            (click)="borrarImagen(nComponents[i])">Delete</button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" *ngIf="showBtns">
+
+                <button type="submit" class="btn-danger" [disabled]="createForm.invalid"> {{this.actionBtn}} </button>
+                <button type="button" class="btn-danger" (click)="newArticle()"> Clear </button>
+                <small *ngIf="labelError"> You must enter a title and content</small>
+            </div>
+        </div>
+
+
+    </form>
+
+</div>

@@ -1,0 +1,61 @@
+<!-- <div [ngClass]="this.commentMessage.isReply ? 'row row-Reply' : 'row'"> -->
+<div class="col">
+    <div class="row">
+        <div class="col-md-3">
+
+            <!-- </div>
+            <div class="col-md-1"> -->
+            <!-- <input type="checkbox" name="chk_{{this.commentMessage.commentID}}" [checked]="commentMessage.checked"
+                id="chk_{{this.commentMessage.commentID}}" (click)="checkBoxCheked()"> -->
+            <label for="chk_{{this.commentMessage.commentID}}" class="lbl_chk">{{this.commentMessage.commentID}}</label>
+            <label for="chk_{{this.commentMessage.commentID}}"
+                class="comment-tittle">{{this.commentMessage.userName}}</label>
+
+            <!-- </div>
+            <div class="col-md-2"> -->
+            <!-- <p [ngClass]="this.commentMessage.isReply ? 'comment-tittle-Reply' : 'comment-tittle'"
+                    class="comment-tittle">{{this.commentMessage.userName}}</p> -->
+        </div>
+        <div class="col-md-4">
+            <p>{{this.commentMessage.createdAt}}</p>
+        </div>
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col">
+                    <p class="pReplies">Replies:</p>
+                </div>
+                <div class="col">
+                    <div *ngFor="let r of this.commentMessage.Reply">
+                        <p class="ReplyID" (click)="mostrarModalReply(r)">{{r.commentID}}</p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-1">
+            <div class="dropdown">
+                <span id="btnMenu" class="oi oi-menu spanClickeable"></span>
+                <div class="dropdown-content">
+                    <div class="spanClickeable" (click)="btnReport_Click()"> Report <span class="oi oi-bullhorn"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <p class="comment-comment">
+                {{this.commentMessage.comment}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input id="btnReply" class="margin-left" name="btnReport" type="button" value="Reply"
+                (click)="btnReply_Click()">
+        </div>
+    </div>
+</div>
+<!-- </div> -->

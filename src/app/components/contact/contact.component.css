@@ -1,0 +1,44 @@
+/*ALL*/
+/*ALL*/
+/*ALL*/
+
+.errorMessage {
+    color: blanchedalmond;
+}
+
+
+/*Mobile*/
+
+/*Mobile*/
+
+/*Mobile*/
+
+@media (max-width: 499px) {
+    .cont-contact {
+        padding-top: 40%;
+        margin-bottom: 5%;
+    }
+
+    #textAreaInput1{
+
+        width: 80%;
+    }
+    #userMail{
+
+        margin-top: 1%;
+    }
+}
+
+/* DESKTOP */
+
+/* DESKTOP */
+
+/* DESKTOP */
+
+@media (min-width: 500px) {
+  
+    .cont-contact {
+        padding-top: 40%;
+        margin-bottom: 5%;
+    }
+}

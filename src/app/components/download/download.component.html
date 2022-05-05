@@ -1,0 +1,32 @@
+<app-header></app-header>
+
+<div class="container">
+
+
+    <div class="row">
+
+        <div class="container-download col-md-12">
+            <h1 *ngIf="!showItems">The Purchase what are you looking is Wrong or Out of Date</h1>
+            <ul *ngIf="showItems" class="list-unstyled">
+                <div *ngFor="let item of itemList; let i = index;first as isFirst;">
+                    <div [ngClass]="isFirst ? 'firstClass' : ''">
+                        <app-download-item [item]="item"></app-download-item>
+                    </div>
+                </div>
+            </ul>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-8">
+            <button *ngIf="showItems" type="button" (click)="downloadAllItem()"
+                class="btn btn-secondary btn-sm">Download
+                All</button>
+        </div>
+    </div>
+</div>
+
+
+
+<app-footer></app-footer>

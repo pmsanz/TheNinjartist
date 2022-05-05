@@ -1,0 +1,40 @@
+<app-header></app-header>
+<app-validating-circle></app-validating-circle>
+<div *ngIf="arrayFeeds.length > 0" class="container">
+
+    <!-- <div *ngIf="arrayFeeds.length > 0"> -->
+
+    <div class="row" *ngFor="let item of arrayFeeds;let i = index;first as isFirst;">
+
+        <div class="col" [class.top-deck]="isFirst == true">
+
+            <app-feed *ngIf="(i <= this.iCount)" [feed_input]="item" (commentRepplied)="commentReplied($event)">
+            </app-feed>
+
+        </div>
+    </div>
+
+    <!-- </div> -->
+
+    <div class="row">
+        <div class="col-md-4">&nbsp;</div>
+        <div class="col-md-2">
+            <button (click)="loadFeeds(1)" class="btnLoadMore">Load More</button>
+        </div>
+        <div class="col-md-6">&nbsp;</div>
+    </div>
+
+    <div class="row">
+        <!-- popup del comentario -->
+        <app-comment-popup [commentpopup]="this.ReplySelected"></app-comment-popup>
+        <!-- CommentsGenerator -->
+    </div>
+    <div class="row">
+        <div class="col">
+            <app-comment-generator [(Reply)]="this.commentRepplied" [feed]="feedFocus"></app-comment-generator>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<app-footer></app-footer>

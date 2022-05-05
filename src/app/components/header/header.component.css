@@ -1,0 +1,309 @@
+/* All */
+
+/* All */
+
+/* All */
+
+/* All */
+
+.faq{
+    margin-top: 31.7% !important;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("/assets/images/header2.jpg");
+    /* Half height */
+    /* height: 100%; */
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: rgba;
+}
+
+.header {
+    width: 100%;
+    /* opacity: 0.5; */
+    position: absolute;
+    top: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.navbar {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 25%;
+}
+
+#imgHeader {
+    width: 125%;
+    height: 100%;
+    margin-left: -12.5% !important;
+    z-index: -100;
+}
+
+.row-header {
+    margin-top: -6.5%;
+    margin-bottom: 6.5%;
+}
+
+.link-header {
+    font-family: "NinjaFont";
+    font-style: normal;
+    color: #e5e5e7;
+    font-size: 15px;
+    z-index: -20;
+}
+
+.link-header-clicked {
+    font-family: "NinjaFont_bold";
+    font-style: normal;
+    color: #899699;
+    font-size: 15px;
+}
+
+.row-title {
+    margin-top: -5.4%;
+    margin-bottom: 6.5%;
+}
+
+.float {
+    position: absolute;
+    width: 98px;
+    bottom: 189px;
+    right: 46%;
+    /* background-color:#0C9; */
+    /* color:#FFF;
+        border-radius:50px;
+        text-align:center;
+        box-shadow: 2px 2px 3px #999; */
+}
+
+/* Mobile */
+
+/* Mobile */
+
+/* Mobile */
+
+/* Mobile */
+
+@media (max-width: 499px) {
+    .social-link {
+        position: absolute;
+        width: 6%;
+        z-index: 100;
+    }
+    .twiter {
+        top: 1%;
+        left: 2%;
+    }
+    .gumroad {
+        top: 7%;
+        left: 2%;
+    }
+    .patreon {
+        top: 13%;
+        left: 2%;
+    }
+    .ninjaIcon {
+        position: absolute;
+        width: 20%;
+        top: 1%;
+        right: 46%;
+    }
+    .text-logo {
+        position: absolute;
+        width: 27%;
+        
+        top: 12%;
+        right: 43%;
+    }
+    .row-title-text {
+        font-family: "NinjaFont";
+        font-style: normal;
+        color: #e5e5e7;
+        /* font-size: 100%; */
+        position: absolute;
+        margin-top: 30.5%;
+        margin-left: 14%;
+    }
+    .row-breadcrum {
+        margin-top: 1.5%;
+        margin-left: 14%;
+        position: absolute;
+        z-index: 1500;
+    }
+   
+    .col-prints {
+        position: absolute;
+        /* top: 20%; */
+        left: 0%;
+        /* font-size: 16px; */
+        margin-top: 65%;
+    }
+    .col-contact {
+        position: absolute;
+        top: 185%;
+        left: 0%;
+    }
+    .col-feed {
+        position: absolute;
+        top: 275%;
+        left: 0%;
+    }
+}
+
+/* Desktop */
+
+/* Desktop */
+
+/* Desktop */
+
+/* Desktop */
+
+@media (min-width: 500px) and (max-width: 1399px) {
+    .social-link {
+        position: absolute;
+        top: 0.8%;
+        width: 2%;
+        z-index: 100;
+    }
+    .twiter {
+        right: 17%;
+    }
+    .gumroad {
+        right: 7%;
+    }
+    .patreon {
+        right: 12%;
+    }
+    .ninjaIcon {
+        position: absolute;
+        width: 7%;
+        top: 27%;
+        right: 46%;
+    }
+    .text-logo {
+        position: absolute;
+        /* width: 15%; */
+        top: 42%;
+        right: 41.5%;
+    }
+    .link-header {
+        font-family: "NinjaFont_bold";
+        font-style: normal;
+        color: #e5e5e7;
+        font-size: 14px;
+        z-index: -20;
+    }
+    .link-header-clicked {
+        font-family: "NinjaFont_bold";
+        font-style: normal;
+        color: #899699;
+        font-size: 15px;
+    }
+    .row-breadcrum {
+        margin-top: 29.5%;
+        margin-left: 20%;
+        position: absolute;
+        z-index: 1500;
+    }
+    .col-store {
+        margin-left: 40%;
+    }
+    .col-prints {
+        margin-left: 75%;
+    }
+    .col-contact {
+        margin-left: 75%;
+    }
+    .row-title-text {
+        font-family: "NinjaFont";
+        font-style: normal;
+        color: #e5e5e7;
+        font-size: 250%;
+        position: absolute;
+        margin-top: 32%;
+        margin-left: 14%;
+    }
+
+    .col-feed {
+        margin-left: 60%;
+    }
+}
+
+    @media (min-width: 1400px) {
+        .social-link {
+            position: absolute;
+            top: 1%;
+            width: 2%;
+            z-index: 100;
+        }
+        .twiter {
+            right: 17%;
+        }
+        .gumroad {
+            right: 7%;
+        }
+        .patreon {
+            right: 12%;
+        }
+        .ninjaIcon {
+            position: absolute;
+            /* width: 7%; */
+            top: 27%;
+            right: 46%;
+        }
+        .text-logo {
+            position: absolute;
+            /* width: 15%; */
+            top: 43%;
+            right: 44%;
+        }
+        .link-header {
+            font-family: "NinjaFont_bold";
+            font-style: normal;
+            color: #e5e5e7;
+            font-size: 14px;
+            z-index: -20;
+        }
+        .link-header-clicked {
+            font-family: "NinjaFont_bold";
+            font-style: normal;
+            color: #899699;
+            font-size: 15px;
+        }
+        .row-breadcrum {
+            margin-top: 29.5%;
+            margin-left: 29%;
+            position: absolute;
+            z-index: 1500;
+        }
+        .col-store {
+            margin-left: 40%;
+        }
+        .col-prints {
+            margin-left: 75%;
+        }
+        .col-contact {
+            margin-left: 75%;
+        }
+        .row-title-text {
+            font-family: "NinjaFont";
+            font-style: normal;
+            color: #e5e5e7;
+            font-size: 250%;
+            position: absolute;
+            margin-top: 32.8%;
+            margin-left: 14%;
+            
+        }
+
+        .col-feed {
+            margin-left: 60%;
+        }
+
+}

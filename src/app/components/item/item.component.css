@@ -1,0 +1,104 @@
+
+.card{
+    margin-top: 30%;
+    min-height: 300px;
+    max-height: 300px;
+    min-width: 250px;
+    max-width: 250px;
+
+}
+.imagePreviewClass{
+width: 240px;
+height: 160px;
+padding-top: 5%;
+padding-right: 3%;
+padding-left: 3%;
+margin-left: 2%;
+
+}
+
+.card-style{
+    background-color: white;
+}
+
+.card-border{
+    box-shadow: inset 6px 4px 5px -4px rgba(0,0,0,0.3);
+
+}
+
+
+.card-footer{
+
+    background-color: white;
+}
+
+.card-body{
+    min-height: 138px;
+    max-height: 138px;
+    box-shadow: inset 6px 0px 5px -4px rgba(0,0,0,0.3);
+    /* min-width: 320px;
+    max-width: 320px; */
+
+}
+
+
+.card-title{
+
+    font-family: "NinjaFont_bold";
+    font-style: normal;
+    color: #899699;
+    font-size: 15px;
+}
+.card-text{
+
+    font-family: "NinjaFont";
+    font-style: normal;
+    color: #899699;
+    font-size: 15px;
+}
+
+
+.oi-bookmark{
+
+    transform: rotate(-90deg);
+    position: absolute;
+    font-size: 390%;
+    top:  78%;
+    right: -3%;
+    color:#f2b455;
+    text-shadow:3px -3px 5px gray;
+
+}
+
+
+.price{
+    /* transform: rotate(90deg); */
+    font-size: 16px;
+    color: white;
+    top: 84%;
+    right: -2%;
+    position:absolute;
+    font-family: "NinjaFont_bold";
+    text-shadow:none;
+
+}
+
+
+.priceBig{
+    /* transform: rotate(90deg); */
+    font-size: 16px;
+    color: white;
+    top: 84%;
+    right: -2%;
+    position:absolute;
+    font-family: "NinjaFont_bold";
+    text-shadow:none;
+
+}
+
+.bookmarkBig{
+
+    font-size: 390% !important;
+    top:  78% !important;
+}
+

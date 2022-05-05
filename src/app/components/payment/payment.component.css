@@ -1,0 +1,26 @@
+.paymentPanel{
+
+    padding-top: 40%;
+
+
+}
+
+.rowBtn{
+
+    margin-top:2%;
+}
+
+.spacedown{
+
+    margin-bottom:15%;
+
+}
+
+.PayPalBtn{
+    background-color: #ffc439;
+}
+.PayPalBtnCredit{
+    color: white;
+    background-color:#2c2e2f;
+}
+

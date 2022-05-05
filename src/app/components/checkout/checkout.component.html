@@ -1,0 +1,62 @@
+<form #checkOutForm="ngForm" (ngSubmit)="onSubmit()">
+
+    <div class="checkOutPanel">
+
+
+        <div class="row">
+
+            <div class="col">
+                <!-- <small #showError="ngModel" (ngModel)="message.error" class="errorMessage">
+               Test </small> -->
+                <ng-container>
+                   
+                    
+                </ng-container>
+
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col">
+                <input id="userMail" name="userMail" placeholder="Enter Mail" #inputEmail="ngModel"
+                    [(ngModel)]="message.userMail" required minlength="4">
+                <small *ngIf="!inputEmail.valid && inputEmail.touched" class="errorMessage">
+                    Enter a valid email</small>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col">
+                <div >
+                    <!-- <small id="messageErrorSmall">{{message.error}}</small> -->
+                    <p [ngClass]="ShowMessageError ? 'errorPopUp block' : 'errorPopUp'">{{message.error}} <span class="oi oi-media-play"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+
+                <input id="chkCoupon" name="chkCoupon" type="checkbox" (click)="clickCheckboxCoupon()">
+                <label for="chkCoupon" class="label-Discount"> Coupon Discount </label>
+            </div>
+        </div>
+
+        <div *ngIf="isChecked" class="row">
+            <div class="col">
+                <input id="coupon" name="coupon" placeholder="Enter Coupon Code" #inputCoupon="ngModel"
+                    [(ngModel)]="message.codeCoupon" required minlength="4">
+                <small *ngIf="!inputCoupon.valid && inputCoupon.touched" class="errorMessage">
+                    Enter a valid coupon</small>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="btnConfirm" type="submit" [disabled]="checkOutForm.invalid"> Confirm </button>
+            </div>
+        </div>
+
+    </div>
+
+</form>

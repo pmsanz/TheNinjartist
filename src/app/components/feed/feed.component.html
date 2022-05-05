@@ -1,0 +1,28 @@
+<!-- Modal Popup -->
+<!-- <div class="row">
+        <div class="col">
+    
+          <app-modal *ngIf="itemSelected" [item]="itemSelected"></app-modal>
+    
+        </div>
+      </div> -->
+
+
+<!-- Feed -->
+<div class="row">
+
+  <div class="offset-1 col-md-8">
+    <h2>{{feed_input.titulo}} </h2>
+    <img class="card-img-top" src="{{this.url + feed_input.imagePreview}}" alt="Card image cap">
+
+  </div>
+  <div class="col">&nbsp;</div>
+</div>
+<!-- Comments -->
+<div class="row">
+  <div class="offset-1 col-md-8">
+
+    <app-comment-array [comments]="this.feed_input.comments" (commentRepplied)="commentReplied($event)">
+    </app-comment-array>
+  </div>
+</div>

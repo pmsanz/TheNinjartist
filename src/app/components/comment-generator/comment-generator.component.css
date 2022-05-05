@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'NinjaFont';
+    src: url('/assets/fonts/ntailu.ttf') format('truetype');
+}
+
+.card-border{
+    box-shadow: inset 2px 1px 10px -1px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+.padding-top{
+    padding-top:7%;
+}
+
+.mb-1 {
+    font-family: "NinjaFont" !important;
+    color: #000000 !important;
+    text-shadow: 0px 0px 1px #6f675e;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.mb-2 {
+    font-family: "NinjaFont" !important;
+    color: #bbb6b1 !important;
+    text-shadow: 0px 0px 1px #aba7a3;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+@media (max-width: 499px) {
+    textarea{
+        width: 90%;
+    }
+    .offset-1{
+        margin: 0 !important;
+    }
+    .comment-generator-general {
+       background-color: white !important;
+        margin-left: 0%;
+        width: 85%;
+        margin-top: 10%;
+    }
+    .margin-left {
+        margin-left: 0%;
+    }
+    .margin-bottom {
+        margin-bottom: 5%;
+    }
+    .margin-top {
+        margin-top: 5%;
+    }
+    .padding-top{
+        padding-top:5%;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 1399px) {
+    .comment-generator-general {
+        background-color: white !important;
+        margin-left: 5%;
+        margin-top: 10%;
+    }
+    .margin-left {
+        margin-left: 1%;
+    }
+    .margin-bottom {
+        margin-bottom: 5%;
+    }
+    .margin-top {
+        margin-top: 5%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .comment-generator-general {
+        background-color: white !important;
+        margin-left: 5%;
+        margin-top: 10%;
+    }
+    .margin-left {
+        margin-left: 1%;
+    }
+    .margin-bottom {
+        margin-bottom: 5%;
+    }
+    .margin-top {
+        margin-top: 5%;
+    }
+}

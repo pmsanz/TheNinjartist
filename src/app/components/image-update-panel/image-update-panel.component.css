@@ -1,0 +1,52 @@
+
+.box-attach{
+
+    margin-top: 1%;
+}
+
+.previewImageMin{
+
+    width: 50%;
+}
+.btnDelete{
+
+    margin-left: 20%;
+}
+
+.fullImagePreview{
+
+    width:100px;
+    height: 75px;
+}
+
+.input-text-area{
+
+width: 100%;
+height: 200px;
+max-height: 200px;
+
+}
+
+.title{
+
+    width: 50%;
+
+}
+
+.checkBoxFeed{
+
+    
+
+}
+
+.btn-update{
+margin-right: -5%;
+
+}
+
+.errorMessage{
+
+    color: blanchedalmond;
+    
+    
+    }

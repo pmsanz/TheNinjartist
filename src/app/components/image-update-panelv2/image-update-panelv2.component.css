@@ -1,0 +1,62 @@
+.box-attach {
+    margin-top: 1%;
+}
+
+.previewImageMin {
+    width: 50%;
+}
+
+.btnDelete {
+    margin-left: 20%;
+}
+
+.fullImagePreview {
+    width: 240px;
+    height: 160px;
+    /* padding-top: 5%; */
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.title {
+    margin-top: -1%;
+    /* margin-bottom: 5%; */
+    width: 50%;
+}
+
+.title-previewImage {
+    margin-top: 2%;
+    margin-bottom: 1%;
+    width: 50%;
+}
+.input-text-area {
+    width: 100%;
+    height: 200px;
+    max-height: 200px;
+}
+
+.checkBoxFeed {}
+
+.btn-update {
+    margin-right: 1%;
+}
+
+.errorMessage {
+    color: red !important;
+}
+
+button:disabled, button[disabled] {
+    border: 2px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}
+
+.hidden{
+display: none;
+
+}
+
+.rowPreview{
+
+    margin-bottom: 5%;
+}
